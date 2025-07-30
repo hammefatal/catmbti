@@ -1,0 +1,8 @@
+.App {
+    font-family: "omyu_pretty";
+}
+
+@font-face {
+    font-family: "omyu_pretty";
+    src: url(/src/assets/fonts/omyu_pretty.ttf);
+}
