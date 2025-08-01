@@ -39,7 +39,7 @@ const KakaoShareButton = () => {
   }
 
   return (
-    <Button style={{ fontFamily: "omyu_pretty", width: 170, marginLeft: '20px' }} >
+    <Button onClick={shareKakao} style={{ fontFamily: "omyu_pretty", width: 170, marginLeft: '20px' }} >
       카카오톡 공유하기
     </Button>
   )
