@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import { ResultData } from '../assets/data/resultdata';
 import { useSearchParams, useNavigate } from 'react-router-dom';
+import KakaoShareButton from '../component/KakaoShareButton';
 
 const Result = () => {
   const navigate = useNavigate();
@@ -22,10 +23,13 @@ const Result = () => {
         <Contents>
             <Title>결과 보기</Title>
             <LogoImage>
-                <img alt="결과" src={resultData.image} className="rounded-circle" width={350} />
+              <img alt="결과" src={resultData.image} className="rounded-circle" width={350} />
             </LogoImage>
             <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
-            <Button style={{ fontFamily: "omyu_pretty" }} onClick={()=>navigate("/")}>테스트 다시하기</Button>
+            <ButtonGroup>
+              <Button style={{ fontFamily: "omyu_pretty", width: 170 }} onClick={()=>navigate("/")}>테스트 다시하기</Button>
+              <KakaoShareButton />
+            </ButtonGroup>
         </Contents>
     </Wrapper>
   );
@@ -66,4 +70,9 @@ const Desc = styled.div`
     font-size: 20pt;
     margin-top: 20px;    
     font-family: "omyu_pretty";    
+`
+
+const ButtonGroup = styled.div`
+    display: flex;
+    flex-direction: row; 
 `
