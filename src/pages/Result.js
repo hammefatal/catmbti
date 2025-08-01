@@ -23,7 +23,7 @@ const Result = () => {
         <Contents>
             <Title>결과 보기</Title>
             <LogoImage>
-                <img src={resultData.image} className="rounded-circle" width={350} />
+                <img alt="결과" src={resultData.image} className="rounded-circle" width={350} />
             </LogoImage>
             <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Desc>
             <Button style={{ fontFamily: "omyu_pretty" }} onClick={()=>navigate("/")}>테스트 다시하기</Button>
