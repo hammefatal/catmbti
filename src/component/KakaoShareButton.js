@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-const {Kakao} = window;
+const { Kakao } = window;
 
 const KakaoShareButton = () => {
   const url = "https://hammefatal-catmbti.netlify.app/";
@@ -11,6 +11,7 @@ const KakaoShareButton = () => {
   React.useEffect(() => {
     Kakao.cleanup();
     Kakao.init("2c1caed580dc691c66ffd595f78f3180");
+    console.log(Kakao.isInitialized());
   }, []);
 
   const shareKakao = () => {
@@ -23,15 +24,16 @@ const KakaoShareButton = () => {
         imageUrl:
           'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
         link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-          webUrl: 'https://developers.kakao.com',
+          mobileWebUrl: resultUrl,
+          webUrl: resultUrl
         },
       },
       buttons: [
         {
           title: '나도 테스트 하러가기',
           link: {
-            mobileWebUrl: url
+            mobileWebUrl: url,
+            webUrl: url
           }
         }
       ]
