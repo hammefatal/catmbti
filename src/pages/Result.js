@@ -1,7 +1,6 @@
 import React from 'react';
 // css-in-js
 import styled from 'styled-components';
-import CatImage from '../assets/catimg.jpg';
 import Button from 'react-bootstrap/Button';
 import { ResultData } from '../assets/data/resultdata';
 import { useSearchParams, useNavigate } from 'react-router-dom';
