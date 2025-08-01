@@ -16,7 +16,6 @@ const KakaoShareButton = () => {
 
   const shareKakao = () => {
     Kakao.Share.sendDefault({
-      container: '#kakaotalk-share-btn',
       objectType: 'feed',
       content: {
         title: '예비집사 판별기 결과',
